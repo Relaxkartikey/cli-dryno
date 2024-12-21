@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom background with subtle gradient */
+body {
+  background: linear-gradient(to bottom, #000000, #0a0a0a);
+}
+
+/* Glitch effect animation */
+@keyframes glitch {
+  0% {
+    clip-path: inset(71% 0 10% 0);
+    transform: translate(-2px, 2px);
+  }
+  20% {
+    clip-path: inset(29% 0 71% 0);
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    clip-path: inset(57% 0 43% 0);
+    transform: translate(2px, 2px);
+  }
+  60% {
+    clip-path: inset(14% 0 86% 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip-path: inset(86% 0 14% 0);
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    clip-path: inset(71% 0 10% 0);
+    transform: translate(-2px, -2px);
+  }
+} 
+
+/* Glow effect for the main title */
+.glow-text {
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.4));
+  }
+}
+
+/* Text distortion effect */
+@keyframes textDistortion {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
+}
+
+/* Ensure hardware acceleration */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
