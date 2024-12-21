@@ -120,3 +120,25 @@ main {
   height: 100vh;
   overflow: hidden;
 }
+
+/* Update sizing and spacing */
+.text-8xl {
+  font-size: clamp(3rem, 8vw, 8rem);  /* Responsive font size */
+}
+
+/* Adjust grid container */
+.grid {
+  height: 100vh;
+  padding: clamp(1rem, 3vw, 2rem);  /* Responsive padding */
+  gap: clamp(0.5rem, 2vw, 1rem);    /* Responsive gap */
+}
+
+/* Ensure content fits */
+main {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
