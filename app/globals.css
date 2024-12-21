@@ -92,3 +92,29 @@ body {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Add after the existing styles */
+html, body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow: visible !important;
+  min-height: 100vh;
+}
+
+/* Modify the fixed positioning */
+.fixed {
+  position: absolute;
+}
+
+/* Ensure content remains visible */
+.overflow-hidden {
+  overflow: visible !important;
+}
+
+/* Adjust the container height */
+.h-[150vh] {
+  min-height: 150vh;
+  overflow: visible !important;
+}
