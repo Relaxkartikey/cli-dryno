@@ -21,14 +21,16 @@ body {
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .grid {
-  overflow: visible !important;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main {
-  overflow: visible !important;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }

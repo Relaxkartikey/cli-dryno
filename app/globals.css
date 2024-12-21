@@ -95,26 +95,28 @@ body {
 
 /* Add after the existing styles */
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 main {
-  overflow: visible !important;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Modify the fixed positioning */
 .fixed {
-  position: absolute;
+  position: fixed;
 }
 
-/* Ensure content remains visible */
+/* Ensure content stays within viewport */
 .overflow-hidden {
-  overflow: visible !important;
+  overflow: hidden;
 }
 
 /* Adjust the container height */
 .h-[150vh] {
-  min-height: 150vh;
-  overflow: visible !important;
+  height: 100vh;
+  overflow: hidden;
 }
