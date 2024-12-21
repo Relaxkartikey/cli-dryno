@@ -95,50 +95,26 @@ body {
 
 /* Add after the existing styles */
 html, body {
-  overflow: hidden;
-  height: 100vh;
-  max-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
-  height: 100vh;
-  overflow: hidden;
+  overflow: visible !important;
+  min-height: 100vh;
 }
 
 /* Modify the fixed positioning */
 .fixed {
-  position: fixed;
+  position: absolute;
 }
 
-/* Ensure content stays within viewport */
+/* Ensure content remains visible */
 .overflow-hidden {
-  overflow: hidden;
+  overflow: visible !important;
 }
 
 /* Adjust the container height */
 .h-[150vh] {
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Update sizing and spacing */
-.text-8xl {
-  font-size: clamp(3rem, 8vw, 8rem);  /* Responsive font size */
-}
-
-/* Adjust grid container */
-.grid {
-  height: 100vh;
-  padding: clamp(1rem, 3vw, 2rem);  /* Responsive padding */
-  gap: clamp(0.5rem, 2vw, 1rem);    /* Responsive gap */
-}
-
-/* Ensure content fits */
-main {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: clamp(0.5rem, 2vw, 1rem);
+  min-height: 150vh;
+  overflow: visible !important;
 }

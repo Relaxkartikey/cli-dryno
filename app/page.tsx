@@ -21,8 +21,8 @@ export default function ComingSoon() {
   if (!mounted) return null
 
   return (
-    <div ref={containerRef} className="h-screen">
-      <main className="absolute inset-0 bg-black flex flex-col items-center justify-center">
+    <div ref={containerRef} className="h-[150vh]">
+      <main className="fixed inset-0 bg-black flex flex-col items-center justify-center overflow-hidden">
         {/* 3D Grid Background */}
         <div className="absolute inset-0 perspective-1000">
           <motion.div
@@ -63,7 +63,7 @@ export default function ComingSoon() {
           {/* Main title with animation */}
           <motion.div className="relative">
             <motion.h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter relative mb-8 glow-text"
+              className="text-8xl md:text-9xl font-bold text-white tracking-tighter relative mb-16 glow-text"
               initial={{ opacity: 0, y: 20 }}
               animate={{ 
                 opacity: 1, 
@@ -145,7 +145,7 @@ function AnimatedComingSoon() {
   const letters = "COMING SOON".split("")
   
   return (
-    <div className="flex items-center gap-[0.15em] text-2xl md:text-3xl font-light">
+    <div className="flex items-center gap-[0.15em] text-3xl md:text-4xl font-light">
       {letters.map((letter, i) => (
         <motion.span
           key={i}
